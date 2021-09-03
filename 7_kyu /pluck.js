@@ -8,10 +8,16 @@ pluck([{a:1, b:3}, {a:2}], 'b') // -> [3, undefined]
 If an object is missing the property, you should just leave it as undefined/None in the output array.
 */
 
+/*
 function pluck(objs, name) {
   let result = [];
   for (let obj of objs) {
       result.push(obj[name]);
     }
   return result;
+}
+*/
+
+function pluck(objs, name) {
+  return objs.map(obj => obj[name]);
 }
